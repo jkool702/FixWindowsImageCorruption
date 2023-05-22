@@ -22,6 +22,8 @@ Open up an administrator powershell prompt and run the following 2 commands:
     (new-object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/jkool702/FixWindowsImageCorruption/main/WindowsImageCorruptionCheck_DISM_SFC_CHKDSK','C:\Windows\System32\Tasks\FixWindowsImageCorruption_DISM_SFC_CHKDSK')
     schtasks /create /TN 'FixWindowsImageCorruption_DISM_SFC_CHKDSK' /xml 'C:\Windows\System32\Tasks\FixWindowsImageCorruption_DISM_SFC_CHKDSK'
 
+Copy these 2 commands and paste them into powershell by right clicking inside the powershell window.
+
 I reccomend this way (using powershell) - since it is basically "fool-proof" 
     
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -29,3 +31,7 @@ I reccomend this way (using powershell) - since it is basically "fool-proof"
 **Option 2 - Use Task Scheduler**
 
 Download the `FixWindowsImageCorruption_DISM_SFC_CHKDSK` file, open "Task Scheduler" as an administrator, click on "Import Task" (on the right side of the window), and select the  `FixWindowsImageCorruption_DISM_SFC_CHKDSK` file that you just downloaded.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+You can of course also manually setup a task to run these 3 commands (`dism`, `sfc` and `chkdsk`) if ypou prefer.
