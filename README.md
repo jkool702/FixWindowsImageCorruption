@@ -19,7 +19,7 @@ NOTE: both ways require administrator privlidges. If you accidentally open task 
 
 Open up an administrator powershell prompt and run the following 2 commands:
 
-    (new-object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/jkool702/FixWindowsImageCorruption/main/WindowsImageCorruptionCheck_DISM_SFC_CHKDSK','C:\Windows\System32\Tasks\FixWindowsImageCorruption_DISM_SFC_CHKDSK')
+    (new-object System.Net.WebClient).DownloadFile('https://raw.githubusercontent.com/jkool702/FixWindowsImageCorruption/main/WindowsImageCorruption_DISM_SFC_CHKDSK','C:\Windows\System32\Tasks\FixWindowsImageCorruption_DISM_SFC_CHKDSK')
     schtasks /CREATE /TN 'FixWindowsImageCorruption_DISM_SFC_CHKDSK' /XML 'C:\Windows\System32\Tasks\FixWindowsImageCorruption_DISM_SFC_CHKDSK'
 
 Copy these 2 commands and paste them into powershell by right clicking inside the powershell window.
